@@ -23,6 +23,7 @@ CUDA_VISIBLE_DEVICES=1 python run_assesment.py \
     --model_version $MODEL_VERSION \
     --merge_type 4 \
     --gnn_version $GNN_VERSION \
+    --use_gcn \
     --use_pool \
     --max_seq_length 128\
     --per_device_eval_batch_size 32\
