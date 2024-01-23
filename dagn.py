@@ -110,8 +110,18 @@ class DAGN(BertPreTrainedModel):
         cumsums = pred_sorted_by_true.exp().flip(dims=[-1]).cumsum(dim=-1).flip(dims=[-1])
         listmle_loss = torch.log(cumsums + 1e-10) - pred_sorted_by_true
         return listmle_loss.sum(dim=-1).mean()
-
-    def get_con_loss(self, positive_keys, negative_keys):
+        
+    def get_con_loss(self, query, positive_keys, negative_keys):
+        nce_fct = InfoNCE()
+        print("query size: ", query.unsqueeze(0).size())
+        print("negative_keys: ", negative_keys.size())
+        for i in range(positive_keys.size(0)):
+            if i != positive_keys.size(0)/4:
+                loss =+ nce_fct(query.unsqueeze(0), positive_keys[i].unsqueeze(0), negative_keys)
+        loss = loss/(positive_keys.size(0)-1)
+        return loss
+        
+    def get_con_lossL(self, positive_keys, negative_keys):
         nce_fct = InfoNCE()
         #print("query size: ", query.unsqueeze(0).size())
         #print("negative_keys: ", negative_keys.size())
