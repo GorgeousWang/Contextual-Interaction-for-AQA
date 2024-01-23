@@ -57,8 +57,8 @@ class DAGN(BertPreTrainedModel):
         self.token_encoder_type = token_encoder_type
         self.max_rel_id = max_rel_id
         self.merge_type = merge_type
-        self.use_gcn = False
-        self.use_pool = True
+        self.use_gcn = use_gcn
+        self.use_pool = use_pool
         assert self.use_gcn or self.use_pool
 
         ''' from modeling_roberta '''
