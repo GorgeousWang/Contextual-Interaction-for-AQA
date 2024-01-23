@@ -466,8 +466,8 @@ class DAGN(BertPreTrainedModel):
 
             mse_fct = MSELoss()
 
-            #loss = 0.8 * mse_fct(reshaped_logits, labels) + 0.2 * (0.5 * loss2 + 0.5 * loss3) 
-            loss = mse_fct(reshaped_logits, labels)
+            loss = 0.8 * mse_fct(reshaped_logits, labels) + 0.2 * (0.5 * loss2 + 0.5 * loss3) 
+            #loss = mse_fct(reshaped_logits, labels)
             #print("loss: ", loss)
             outputs = (loss, ) + outputs
         return outputs
