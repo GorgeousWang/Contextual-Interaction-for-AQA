@@ -16,3 +16,6 @@ pytorch-infonce ： pip install info-nce-pytorch #用于对比学习的一个损
 sh run.sh
 ```
 
+## something wrong in original code
+1. ![image](https://github.com/GorgeousWang/Contextual-Interaction-for-AQA/assets/33348389/da5546a5-d0ed-461b-9aa9-c61e5e206939)
+`"in case"`
