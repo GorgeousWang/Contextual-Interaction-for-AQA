@@ -14,6 +14,7 @@ pip install transformers
 pip install jsonlines
 pip install gensim
 pip install info-nce-pytorch #用于对比学习的一个损失函数库
+pip install textblob
 
 报错：
 cannot import name ‘triu’ from ‘scipy.linalg’
