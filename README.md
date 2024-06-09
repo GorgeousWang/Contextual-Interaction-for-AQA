@@ -8,6 +8,12 @@ transformers==3.1.0
 numpy==1.19.2
 gensim==3.8.3
 pytorch-infonce ： pip install info-nce-pytorch #用于对比学习的一个损失函数库
+
+#my env
+pip install transformers
+pip install jsonlines
+pip install gensim
+pip install info-nce-pytorch #用于对比学习的一个损失函数库
 ```
 
 
