@@ -14,6 +14,13 @@ pip install transformers
 pip install jsonlines
 pip install gensim
 pip install info-nce-pytorch #用于对比学习的一个损失函数库
+
+报错：
+cannot import name ‘triu’ from ‘scipy.linalg’
+https://www.soinside.com/question/brZ46N5EH7bk9xdVwXaQje
+找到原因,在SciPy 1.13中去掉了这个函数,所以降低scipy的版本.
+pip install scipy==1.10.1
+
 ```
 
 
