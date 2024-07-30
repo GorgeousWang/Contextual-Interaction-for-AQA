@@ -10,7 +10,7 @@ gensim==3.8.3
 pytorch-infonce ： pip install info-nce-pytorch #用于对比学习的一个损失函数库
 
 #my env
-pip install transformers
+pip install transformers==4.35.2 #4.43.3会报错
 pip install jsonlines
 pip install gensim
 pip install info-nce-pytorch #用于对比学习的一个损失函数库
